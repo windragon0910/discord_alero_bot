@@ -22,7 +22,7 @@ git clone https://github.com/ZAD4YTV/alero-discord-bot
 
 #### Manual
 
-- Download [here](https://codeload.github.com/ZAD4YTV/discord-rich-presence/zip/main)
+- Download [here](https://codeload.github.com/ZAD4YTV/alero-discord-bot/zip/main)
 
 2. Move inside the repository
 
