@@ -27,7 +27,7 @@ git clone https://github.com/ZAD4YTV/alero-discord-bot
 2. Move inside the repository
 
 ```sh
-cd excract-wifi-passwords-from-windows
+cd alero-discord-bot
 ```
 
 - Or with your File Explorer, move to the folder.
