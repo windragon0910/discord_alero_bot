@@ -16,7 +16,7 @@ client.on('ready', () => {
         featuresDir: 'features',
         showWarns: false,
         del: 5,
-        testServers: [process.env.TESTGUILDID],
+        testServers: [process.env.TESTGUILDID]
     })
     .setDefaultPrefix(process.env.PREFIX)
     .setColor(0x0099ff)

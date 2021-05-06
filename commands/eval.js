@@ -65,6 +65,6 @@ module.exports = {
                 message.channel.send(errorEmbed);
             };
         
-        console.log('Eval Executed.'.bgBlue.black);
+        console.log('- - - - Eval Executed.'.bgBlue.black);
     },
 };

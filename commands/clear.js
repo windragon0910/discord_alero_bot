@@ -29,6 +29,6 @@ module.exports = {
             message.reply("You can't delete more than 100 messages at command!");
         };
         /* At the end */
-        console.log('Clear Executed.'.bgBlue.black);
+        console.log('- - - - Clear Executed.'.bgBlue.black);
     }
 }

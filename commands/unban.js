@@ -51,6 +51,6 @@ module.exports = {
             message.reply('You didn\'t mention the user to unban!');
         };
     
-        console.log('Unban Executed.'.bgBlue.black);
+        console.log('- - - - Unban Executed.'.bgBlue.black);
     },
 };

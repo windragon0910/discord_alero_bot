@@ -112,6 +112,6 @@ module.exports = {
         };
     })
     /* At the end */
-    console.log('Reaction Role Executed.'.bgBlue.black);
+    console.log('- - - - Reaction Role Executed.'.bgBlue.black);
     },
 };

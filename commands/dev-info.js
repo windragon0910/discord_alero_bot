@@ -27,7 +27,7 @@ module.exports = {
                 )
             .setImage('https://media.discordapp.net/attachments/818274211541811220/818275986218942504/dev-info-img.png')
             .setFooter('Alero, by ZAD4Y', 'https://media.discordapp.net/attachments/818274211541811220/818274289680646164/logo.png');
-        message.channel.send(embed).then(console.log('Dev-Info Executed.'.bgBlue.black));
+        message.channel.send(embed).then(console.log('- - - - Dev-Info Executed.'.bgBlue.black));
     }
 
 }

@@ -34,7 +34,7 @@ module.exports = {
                     .setTimestamp()
                     .setFooter('Alero, by ZAD4Y', logo);
                 
-                    message.channel.send(embed1).then(console.log('Info Executed'));
+                message.channel.send(embed1).then(console.log('- - - - Info Executed'));
                 break;
             case 'dev':
                 let embed2 = new Discord.MessageEmbed()
@@ -52,7 +52,7 @@ module.exports = {
                 .setImage('https://media.discordapp.net/attachments/818274211541811220/818275986218942504/dev-info-img.png')
                 .setFooter('Alero, by ZAD4Y', logo);
 
-                message.channel.send(embed2).then(console.log('Info-Dev Executed.'));
+                message.channel.send(embed2).then(console.log('- - - - Info-Dev Executed.'));
                 break;
             case 'dpkg':
                 let embed3 = new Discord.MessageEmbed()
@@ -71,7 +71,7 @@ module.exports = {
                     )
                     .setTimestamp()
                     .setFooter('Alero, by ZAD4Y', logo);
-                message.channel.send(embed3).then(console.log('Info-Dpkg Executed.'));
+                message.channel.send(embed3).then(console.log('- - - - Info-Dpkg Executed.'));
                 break;
             case 'sudo':
                 let embed4 = new Discord.MessageEmbed()
@@ -87,7 +87,7 @@ module.exports = {
                     )
                     .setTimestamp()
                     .setFooter('Alero, by ZAD4Y', logo);
-                message.channel.send(embed4).then(console.log('Info-Sudo Executed.'));
+                message.channel.send(embed4).then(console.log('- - - - Info-Sudo Executed.'));
                 break;
             case 'switch-to-linux':
                 let embed5 = new Discord.MessageEmbed()
@@ -103,7 +103,7 @@ module.exports = {
                     )
                     .setTimestamp()
                     .setFooter('Alero, by ZAD4Y', logo);
-                message.channel.send(embed5).then(console.log('Info-Switch-to-Linux Executed.'))
+                message.channel.send(embed5).then(console.log('- - - - Info-Switch-to-Linux Executed'.bgBlue.black));
                 break;
         }
     }

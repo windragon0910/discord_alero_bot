@@ -11,6 +11,7 @@ module.exports = (client, instance) => {
         };
     });
     console.log('Log-Messages Feature Loaded'.bgGreen.black);
+    console.log('\nLogs:'.bgYellow.black)
 };
 
 module.exports.config = {

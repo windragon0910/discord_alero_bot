@@ -39,6 +39,6 @@ module.exports = {
             message.reply('You didn\'t mention the user to kick!');
         };
         
-        console.log('Kick Executed.'.bgBlue.black);
+        console.log('- - - - Kick Executed.'.bgBlue.black);
     },
 };

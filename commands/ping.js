@@ -12,6 +12,6 @@ module.exports = {
         console.log('Ping Command Loaded'.bgBlue.black)
     },
     callback: ({ message }) => {
-        message.channel.send('🏓 Pong!').then(console.log('Ping Executed.'.bgBlue.black));
+        message.channel.send('🏓 Pong!').then(console.log('- - - - Ping Executed.'.bgBlue.black));
     },
 };

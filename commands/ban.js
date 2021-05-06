@@ -56,6 +56,6 @@ module.exports = {
             message.reply('You didn\'t mention the user to ban!');
         };
         
-        console.log('Ban Executed.'.bgBlue.black);
+        console.log('- - - - Ban Executed.'.bgBlue.black);
     },
 };
