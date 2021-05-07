@@ -42,5 +42,5 @@ node app.js
 
 ### License
 
-- This project is under GNU License
+- This project is under MIT License
 - Read the license [here](https://github.com/ZAD4YTV/alero-discord-bot/blob/main/LICENSE).
