@@ -16,7 +16,6 @@
 #### Using GIT
 
 ```sh
-cd resources/
 git clone https://github.com/ZAD4YTV/alero-discord-bot
 ```
 
