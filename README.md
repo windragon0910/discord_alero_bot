@@ -32,7 +32,9 @@ cd alero-discord-bot
 
 - Or with your File Explorer, move to the folder.
 
-3. Start the App
+3. Go to the `.env` file and edit the options.
+
+4. Start the App
 
 ```sh
 npm start
