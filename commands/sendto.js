@@ -7,7 +7,7 @@ module.exports = {
     guildOnly: false,
     testOnly: false,
     maxArgs: 99,
-    minArgs: 1,
+    minArgs: 2,
     init: (client, instance) => {
         console.log('Sendto Command Loaded'.bgBlue.black);
     },

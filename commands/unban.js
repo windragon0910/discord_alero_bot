@@ -19,7 +19,8 @@ module.exports = {
         var r = args;
         delete r[0];
         var r2 = r.toString();
-        var reason = r2.replace(',', ' ');
+        var reason = r2.replace(/,/g, ' ');
+        var reason = reason.replace(/  /g, ', ');
         if (reason == "" || reason == " ") {
             var reason = "Reason not especified";
         };

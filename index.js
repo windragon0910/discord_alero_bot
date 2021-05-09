@@ -1,5 +1,5 @@
 /* Modules */
-const colors = require('colors')
+const colors = require('colors');
 const Discord = require('discord.js');
 const WOKCommands = require('wokcommands');
 require('dotenv').config();
@@ -46,7 +46,7 @@ client.on('ready', () => {
     ]);
     WOK.on('commandException', (command, message, error) => {   
         console.log(`Exception ocucured when using command "${command.names[0]}"! Error:`.bgRed);
-        console.error(error);
+        console.log(error.red);
     });
 });
 

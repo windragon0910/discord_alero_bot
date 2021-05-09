@@ -13,13 +13,15 @@ module.exports = {
     },
     callback: async function({message, args, text, client, prefix, instance, channel}) {
         async function x() {
-            beforeprearg = args.toString();
-            prearg = beforeprearg.replace(/,/g, ' ');
-            return arg = await prearg;
+            arg = args.toString();
+            arg = arg.replace(/,/g, ' ');
+            arg = arg.replace(/  /g, ', ')
+            return arg = await arg;
         };
         send = x().then(() => {
             message.channel.send(arg);
-            console.log(arg);
-        })
+            console.log('Send command return: '.cyan + arg.cyan);
+        });
+        console.log('- - - - Send Executed.'.bgBlue.black);
     },
 };
