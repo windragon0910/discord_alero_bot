@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 module.exports = {
     name: 'Dmto',
-    category: 'Fun',
+    category: 'Messages',
     description: 'Send a DM to a person!',
     ownerOnly: false,
     guildOnly: false,
     testOnly: false,
-    maxArgs: 99,
+    cooldown: '5s',
+    maxArgs: -1,
     minArgs: 2,
     init: (client, instance) => {
         console.log('Send Command Loaded'.bgBlue.black);

@@ -8,7 +8,9 @@ module.exports = {
     ownerOnly: false,
     guildOnly: false,
     testOnly: false,
+    cooldown: '5s',
     maxArgs: 1,
+    minArgs: 0,
     init: (client, instance) => {
         console.log('Dev-Info Command Loaded'.bgBlue.black);
     },

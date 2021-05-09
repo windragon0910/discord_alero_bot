@@ -9,8 +9,9 @@ module.exports = {
     ownerOnly: false,
     guildOnly: true,
     testOnly: false,
+    cooldown: '3s',
     minArgs: 1,
-    maxArgs: -1,
+    maxArgs: 1,
     permissions: ['MANAGE_MESSAGES'],
     init: (client, instance) => {
         console.log('Reaction-Role Command Loaded'.bgBlue.black);

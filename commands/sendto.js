@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 module.exports = {
     name: 'sendto',
-    category: 'Fun',
+    category: 'Messages',
     description: 'Reply in the channel that was sent the command the args!',
     ownerOnly: false,
     guildOnly: false,
     testOnly: false,
-    maxArgs: 99,
+    cooldown: '10s',
+    maxArgs: -1,
     minArgs: 2,
     init: (client, instance) => {
         console.log('Sendto Command Loaded'.bgBlue.black);

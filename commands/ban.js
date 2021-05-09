@@ -7,6 +7,7 @@ module.exports = {
     ownerOnly: false,
     guildOnly: true,
     testOnly: false,
+    cooldown: '1s',
     minArgs: 1,
     maxArgs: -1,
     permissions: ['BAN_MEMBERS'],

@@ -6,8 +6,9 @@ module.exports = {
     ownerOnly: false,
     guildOnly: false,
     testOnly: false,
-    // slash: true, WORKING, BUT ONLY CAN WORK IF YOU SEND IT TO A TEST SERVER.
+    cooldown: '5s',
     maxArgs: 0,
+    minArgs: 0,
     init: (client, instance) => {
         console.log('Ping Command Loaded'.bgBlue.black)
     },

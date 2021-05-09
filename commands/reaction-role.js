@@ -9,6 +9,7 @@ module.exports = {
     ownerOnly: false,
     guildOnly: true,
     testOnly: false,
+    cooldown: '10m',
     minArgs: 0,
     maxArgs: -1,
     permissions: ['MANAGE_ROLES'],

@@ -3,11 +3,12 @@ const colors = require('colors')
 
 module.exports = {
     name: 'eval',
-    category: 'Development',
+    category: 'Owner Only',
     description: 'Eval JS code.',
     ownerOnly: true,
     guildOnly: false,
     testOnly: false,
+    cooldown: '3s',
     minArgs: 1,
     maxArgs: -1,
     init: (client, instance) => {

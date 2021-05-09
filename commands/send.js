@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 module.exports = {
     name: 'send',
-    category: 'Fun',
+    category: 'Messages',
     description: 'Reply in the channel that was sent the command the args!',
     ownerOnly: false,
     guildOnly: false,
     testOnly: false,
-    maxArgs: 99,
+    cooldown: '5s',
+    maxArgs: -1,
     minArgs: 1,
     init: (client, instance) => {
         console.log('Send Command Loaded'.bgBlue.black);
