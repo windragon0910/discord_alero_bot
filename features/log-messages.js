@@ -3,10 +3,10 @@ const colors = require('colors');
 module.exports = (client, instance) => {
     client.on('message', (message) => {
         if(message.channel.type != "dm" && !message.author.bot) {
-            console.log("New Message. Server: ".yellow + message.guild.name.yellow + ". Channel: ".yellow + message.channel.name.yellow + " From: ".yellow + message.author.username.yellow + ": ".yellow + message.content.yellow);
+            console.log("New Message. Server: ".cyan + message.guild.name.cyan + ". Channel: ".cyan + message.channel.name.cyan + " From: ".cyan + message.author.username.cyan + ": ".cyan + message.content.cyan);
         } else {
             if (!message.author.bot) {
-                console.log("DM Message from: ".yellow + message.author.username.yellow + ": ".yellow + message.content.yellow);
+                console.log("DM Message from: ".cyan + message.author.username.cyan + ": ".cyan + message.content.cyan);
             }
         };
     });

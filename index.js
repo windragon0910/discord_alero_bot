@@ -45,7 +45,7 @@ client.on('ready', () => {
         },
     ]);
     WOK.on('commandException', (command, message, error) => {   
-        console.log(`Exception ocucured when using command "${command.names[0]}"! Error:`.bgRed);
+        console.log(`Exception happened when using command "${command.names[0]}"! Error:`.bgRed);
         console.log(error.red);
     });
 });
