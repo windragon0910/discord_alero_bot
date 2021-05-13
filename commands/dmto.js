@@ -10,7 +10,7 @@ module.exports = {
     maxArgs: -1,
     minArgs: 2,
     init: (client, instance) => {
-        console.log('Send Command Loaded'.bgBlue.black);
+        console.log('Dmto Command Loaded'.yellow);
     },
     callback: async function({message, args, text, client, prefix, instance, channel}) {
         if (isNaN(args[0])) {
@@ -26,32 +26,35 @@ module.exports = {
             isMentioned = true;
             run = true;
         };
-        function creatingTheArg() {
-            arg = args;
-            delete arg[0];
+        function arg() {
+            arg = args.slice(1);
             arg = arg.toString();
             arg = arg.replace(/,/g, ' ');
             arg = arg.replace(/  /g, ', ');
             return arg;
-        }
+        };
+
         if(run) {
             if(isMentioned) {
-                try {
                     let memberToSend = message.guild.member(user);
-                    memberToSend.send(creatingTheArg());
-                    message.reply('Message sent!');
-                } catch (error) {
-                    message.reply('I can\'t send a message to that person, maybe he/she has DMs deactivated.');
-                    console.error(error);
-                };
+                    memberToSend.send(arg()).then(() => {
+                        message.reply('Message sent!');
+                    }).catch((err) => {
+                        message.reply('I can\'t send a message to that person, maybe he/she has DMs deactivated.');
+                        console.log(err);
+                    });
             } else {
-                try {
-                    user = args[0];
-                    client.users.cache.get(user).send(creatingTheArg());
-                    message.reply('Message sent!');
-                } catch (error) {
-                    message.reply('I can\'t send a message to that person, maybe he/she has DMs deactivated.');
-                };
+                const userToSend = client.users.cache.get(args[0]);
+                if(userToSend != undefined) {
+                    userToSend.send(arg()).then(() => {
+                        message.reply('Message sent!');
+                    }).catch((err) => {
+                        message.reply('I can\'t send a message to that person, maybe he/she has DMs deactivated.');
+                        console.log(err);
+                    });
+                } else {
+                    message.reply('You give me a Invalid ID.');
+                }
             }
         } else {
             message.reply('Invalid user. Try with the ID or mentioning the user.');

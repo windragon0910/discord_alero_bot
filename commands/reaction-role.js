@@ -14,7 +14,7 @@ module.exports = {
     maxArgs: -1,
     permissions: ['MANAGE_ROLES'],
     init: (client, instance) => {
-        console.log('Reaction-Role Command Loaded'.bgBlue.black);
+        console.log('Reaction-Role Command Loaded'.yellow);
     },
     callback: async({message, args, text, client, prefix, instance, channel}) => {
     function roleCreate(name, color) {

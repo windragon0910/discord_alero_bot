@@ -10,7 +10,7 @@ module.exports = {
     maxArgs: 0,
     minArgs: 0,
     init: (client, instance) => {
-        console.log('Ping Command Loaded'.bgBlue.black)
+        console.log('Ping Command Loaded'.yellow)
     },
     callback: ({ message }) => {
         message.channel.send('🏓 Pong!').then(console.log('- - - - Ping Executed.'.bgBlue.black));

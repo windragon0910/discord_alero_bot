@@ -10,19 +10,19 @@ module.exports = {
     maxArgs: -1,
     minArgs: 1,
     init: (client, instance) => {
-        console.log('Send Command Loaded'.bgBlue.black);
+        console.log('Send Command Loaded'.yellow);
     },
     callback: async function({message, args, text, client, prefix, instance, channel}) {
-        async function x() {
-            arg = args.toString();
+        function argument() {
+            arg = args;
+            arg = arg.toString();
             arg = arg.replace(/,/g, ' ');
-            arg = arg.replace(/  /g, ', ')
-            return arg = await arg;
+            arg = arg.replace(/  /g, ', ');
+            return arg;
         };
-        send = x().then(() => {
-            message.channel.send(arg);
-            console.log('Send command return: '.cyan + arg.cyan);
-        });
+        
+        message.channel.send(argument());
+        console.log('Send command return: '.cyan + argument().cyan);
         console.log('- - - - Send Executed.'.bgBlue.black);
     },
 };

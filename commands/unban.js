@@ -12,18 +12,18 @@ module.exports = {
     maxArgs: -1,
     permissions: ['BAN_MEMBERS'],
     init: (client, instance) => {
-        console.log('Unban Command Loaded'.bgBlue.black);
+        console.log('Unban Command Loaded'.yellow);
     },
     callback: ({message, args, text, client, prefix, instance, channel}) => {
         const member = args[0];
         /* Reason */
-        var r = args;
-        delete r[0];
-        var r2 = r.toString();
-        var reason = r2.replace(/,/g, ' ');
-        var reason = reason.replace(/  /g, ', ');
-        if (reason == "" || reason == " ") {
-            var reason = "Reason not especified";
+        function arg() {
+            arg = args.slice(1);
+            arg = arg.toString();
+            arg = arg.replace(/,/g, ' ');
+            arg = arg.replace(/  /g, ', ');
+            if(arg == '' || arg == ' ' || arg == undefined) return arg = "Reason not especified";
+            return arg;
         };
         /* Embed */
         

@@ -8,7 +8,7 @@ module.exports = (client, instance) => {
         console.log("Red".red + "Blue".blue + "Magenta".magenta + "Yellow".yellow + "White".white + "Black".black.bgWhite + "Cyan".cyan + "Green".green);
         };
     });
-    console.log('Colors-Test Feature Loaded'.bgGreen.black);
+    console.log('Colors-Test Feature Loaded'.red.bgWhite);
 };
 
 module.exports.config = {

@@ -12,20 +12,20 @@ module.exports = {
     maxArgs: -1,
     permissions: ['BAN_MEMBERS'],
     init: (client, instance) => {
-        console.log('Ban Command Loaded'.bgBlue.black);
+        console.log('Ban Command Loaded'.yellow);
     },
     callback: ({message, args, text, client, prefix, instance, channel}) => {
         const member = message.mentions.users.first();
         var memberBannedAvatarURL = member.displayAvatarURL({format: "png", dynamic: true});
 
         /* Reason */
-        var r = args;
-        delete r[0];
-        var r2 = r.toString();
-        var reason = r2.replace(/,/g, ' ');
-        var reason = reason.replace(/  /g, ', ');
-        if (reason == "" || reason == " ") {
-            var reason = "Reason not especified";
+        function arg() {
+            arg = args.slice(1);
+            arg = arg.toString();
+            arg = arg.replace(/,/g, ' ');
+            arg = arg.replace(/  /g, ', ');
+            if(arg == '' || arg == ' ' || arg == undefined) return arg = "Reason not especified";
+            return arg;
         };
 
         /* Embed */
@@ -36,7 +36,7 @@ module.exports = {
             .setDescription(`Banned by ${message.author.tag}`)
             .setThumbnail(`${memberBannedAvatarURL}`)
             .addFields(
-                { name: `${member.tag} has been banned`, value: `Reason: ${reason}`, inline: false },
+                { name: `${member.tag} has been banned`, value: `Reason: ${arg()}`, inline: false },
             )
             .setImage('https://cdn.discordapp.com/attachments/818274211541811220/826110597019074640/ban.png')
             .setTimestamp()
@@ -46,7 +46,7 @@ module.exports = {
         if(member) {
             const memberToBan = message.guild.member(member);
             memberToBan
-            .ban( {reason: `${reason}`})
+            .ban( {reason: `${arg()}`})
             .then(() => {
                 message.channel.send(embed);
             })

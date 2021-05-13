@@ -9,7 +9,7 @@ module.exports = {
     maxArgs: 2,
     minArgs: 0,
     init: (client, instance) => {
-        console.log('Help Command Loaded'.bgBlue.black);
+        console.log('Help Command Loaded'.yellow);
     },
     callback: ({message, args, text, client, prefix, instance, channel}) => {
         

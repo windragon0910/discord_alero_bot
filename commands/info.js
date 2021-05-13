@@ -12,7 +12,7 @@ module.exports = {
     maxArgs: 1,
     minArgs: 0,
     init: (client, instance) => {
-        console.log('Dev-Info Command Loaded'.bgBlue.black);
+        console.log('Info Command Loaded'.yellow);
     },
     callback: ({message, args, text, client, prefix, instance, channel}) => {
         var logo = 'https://media.discordapp.net/attachments/818274211541811220/818274289680646164/logo.png'

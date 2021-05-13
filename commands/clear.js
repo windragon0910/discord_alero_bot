@@ -14,10 +14,9 @@ module.exports = {
     maxArgs: 1,
     permissions: ['MANAGE_MESSAGES'],
     init: (client, instance) => {
-        console.log('Reaction-Role Command Loaded'.bgBlue.black);
+        console.log('Reaction-Role Command Loaded'.yellow);
     },
-    callback: async({message, args, text, client, prefix, instance, channel}) => { 
-        if(!args[0]) return message.reply("Please, enter the amount of messages that you want to clear!");
+    callback: async({message, args, text, client, prefix, instance, channel}) => {
         if(isNaN(args[0])) return message.reply("Please enter a real number!");
         if(args[0] < 1) return message.reply("You must delete at least one message!");
 
@@ -27,7 +26,7 @@ module.exports = {
                 message.reply(`✅Deleted \`${args[0]} Messages succesfully!\`✅`);
             });
         } else {
-            message.reply("You can't delete more than 100 messages at command!");
+            message.reply("You can't delete more than 100 messages, please enter again the command below!");
         };
         /* At the end */
         console.log('- - - - Clear Executed.'.bgBlue.black);

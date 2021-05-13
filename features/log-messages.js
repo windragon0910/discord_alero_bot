@@ -10,7 +10,7 @@ module.exports = (client, instance) => {
             }
         };
     });
-    console.log('Log-Messages Feature Loaded'.bgGreen.black);
+    console.log('Log-Messages Feature Loaded'.red.bgWhite);
     console.log('\nLogs:'.bgYellow.black)
 };
 

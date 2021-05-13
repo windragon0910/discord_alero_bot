@@ -12,26 +12,26 @@ module.exports = {
     maxArgs: -1,
     permissions: ['KICK_MEMBERS'],
     init: (client, instance) => {
-        console.log('Kick Command Loaded'.bgBlue.black);
+        console.log('Kick Command Loaded'.yellow);
     },
     callback: ({message, args, text, client, prefix, instance, channel}) => {
         const member = message.mentions.users.first();
         /* Reason */
-        var r = args;
-        delete r[0];
-        var r2 = r.toString();
-        var reason = r2.replace(/,/g, ' ');
-        var reason = reason.replace(/  /g, ', ');
-        if (reason == "" || reason == " ") {
-            var reason = "Reason not especified";
+        function arg() {
+            arg = args.slice(1);
+            arg = arg.toString();
+            arg = arg.replace(/,/g, ' ');
+            arg = arg.replace(/  /g, ', ');
+            if(arg == '' || arg == ' ' || arg == undefined) return arg = "Reason not especified";
+            return arg;
         };
         
         if(member) {
             const memberToBan = message.guild.member(member);
             memberToBan
-            .ban({reason: reason})
+            .ban({reason: arg()})
             .then(() => {
-                message.reply(`${member.tag} has been kicked! Reason: ${reason}`);
+                message.reply(`${member.tag} has been kicked! Reason: ${arg()}`);
             })
             .catch(err => {
                 message.reply('I can\'t kick this member!');
